@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tambah Tabungan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/tabungan.css">
+</head>
+<body class="min-h-screen font-inter bg-gradient-to-br from-[#081028] via-[#0c1726] to-[#0f2033] text-slate-100">
+<div id="pageWrap" class="min-h-screen">
+<div class="max-w-2xl mx-auto p-6">
+  <a href="../index.html" class="inline-flex items-center gap-2 text-slate-300 mb-4">← Kembali ke Dashboard</a>
+  <div class="bg-white/3 border border-white/5 rounded-2xl p-6" data-aos="fade-up">
+    <h2 class="text-xl font-poppins mb-2">Buat Tujuan Tabungan Baru</h2>
+    <p class="text-sm text-slate-400 mb-4">Isi nama tujuan, target nominal, dan upload gambar dari device kamu. <br><span class="text-xs text-slate-500">Saldo awal opsional — isi jika sudah ada uang yang sudah disimpan sebelumnya.</span></p>
+    <form id="tambahForm" class="space-y-4">
+      <div>
+        <label class="text-sm text-slate-300">Nama Tujuan</label>
+        <input id="nama" type="text" required class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-accent" placeholder="Contoh: Beli iPhone 16">
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="text-sm text-slate-300">Target Nominal (Rp)</label>
+          <input id="target" type="text" inputmode="numeric" required class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none" placeholder="Contoh: 10.000.000">
+        </div>
+        <div>
+          <label class="text-sm text-slate-300">Saldo Awal (Rp) — opsional</label>
+          <input id="terkumpul" type="text" inputmode="numeric" value="0" class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none" placeholder="0">
+        </div>
+      </div>
+      <div>
+        <label class="text-sm text-slate-300">Gambar Tujuan (opsional)</label>
+        <div class="mt-2 flex items-center gap-3">
+          <input id="gambar" type="file" accept="image/*" class="text-sm text-slate-300">
+          <div id="previewWrap" class="w-28 h-20 rounded-lg bg-white/5 flex items-center justify-center overflow-hidden">
+            <img id="previewImg" class="object-cover w-full h-full hidden" alt="preview">
+            <span id="previewText" class="text-xs text-slate-400 px-2">Preview</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 mt-4">
+        <button id="saveBtn" type="submit" class="btn-primary px-4 py-2 rounded-lg">Simpan</button>
+        <a href="../index.html" class="text-slate-300">Batal</a>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="../js/components/storage.js"></script>
+<script src="../js/components/animation.js"></script>
+<script src="../js/tambah-tabungan.js"></script>
+</body>
+</html>

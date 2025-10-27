@@ -1,0 +1,4 @@
+document.addEventListener("DOMContentLoaded",()=>{ if(typeof AOS!=='undefined') AOS.init({duration:560,once:true,easing:'ease-out-cubic'}); const wrap=document.getElementById('pageWrap'); if(wrap) gsap.fromTo(wrap,{opacity:0,y:8},{opacity:1,y:0,duration:0.6,ease:'power2.out'}); });
+function animateEntry(selector='.card'){ if(typeof gsap==='undefined') return; gsap.fromTo(selector,{opacity:0,y:18},{opacity:1,y:0,duration:0.6,stagger:0.08,ease:'power2.out'}); }
+function animateProgress(el,toPercent=0){ if(typeof gsap==='undefined'){ el.style.width=toPercent+'%'; return;} gsap.to(el,{width:toPercent+'%',duration:0.8,ease:'power2.out'}); }
+function fadeAndNavigate(url){ const wrap=document.getElementById('pageWrap'); if(!wrap){window.location.href=url;return;} gsap.to(wrap,{opacity:0,y:-6,duration:0.45,ease:'power2.inOut',onComplete:()=>window.location.href=url}); }
