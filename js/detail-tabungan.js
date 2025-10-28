@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded',async ()=>{
             </div>
 
             <div id="depositArea" class="mt-4 hidden">
-              <label class="text-sm text-slate-300">Nama Penabung</label>
-              <input id="depositorName" type="text" class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none" placeholder="Contoh: Rizal">
+              <label class="text-sm text-slate-300">Nama</label>
+              <input id="depositorName" type="text" class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none" placeholder="">
               <label class="text-sm text-slate-300 mt-2">Nominal (Rp)</label>
               <div class="flex gap-2 mt-2">
-                <input id="depositVal" type="text" inputmode="numeric" class="bg-transparent border border-white/6 rounded-md px-3 py-2 w-full" placeholder="Contoh: 50.000">
+                <input id="depositVal" type="text" inputmode="numeric" class="bg-transparent border border-white/6 rounded-md px-3 py-2 w-full" placeholder="">
                 <button id="depositSave" class="bg-green-500 px-3 py-2 rounded-md">Simpan</button>
               </div>
             </div>
