@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded',async ()=>{
   }
 
   // delete modal handlers for detail
-  const deleteModal = document.getElementById('deleteModalDetail');
   cancelBtn.addEventListener('click', ()=> deleteModal.classList.remove('show'));
   confirmBtn.addEventListener('click', async ()=>{
     await Storage.remove(id);
