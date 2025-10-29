@@ -39,9 +39,18 @@
             <img id="previewImg" class="object-cover w-full h-full hidden" alt="preview">
             <span id="previewText" class="text-xs text-slate-400 px-2">Preview</span>
           </div>
+        <div id="cropModal" class="fixed inset-0 hidden z-50 items-center justify-center">
+          <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+          <div class="relative bg-[#081028] border border-white/6 rounded-xl p-6 w-full max-w-lg mx-4 text-center">
+            <h3 class="text-lg font-semibold mb-3">Potong Gambar</h3>
+            <canvas id="cropCanvas" class="mx-auto rounded-lg border border-white/10"></canvas>
+            <div class="flex justify-center gap-3 mt-4">
+              <button id="cropCancel" class="px-4 py-2 rounded-md bg-white/10">Batal</button>
+              <button id="cropConfirm" class="px-4 py-2 rounded-md bg-green-600">Gunakan</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="flex items-center gap-3 mt-4">
+        <div class="flex items-center gap-3 mt-4">
         <button id="saveBtn" type="submit" class="btn-primary px-4 py-2 rounded-lg">Simpan</button>
         <a href="../index.html" class="text-slate-300">Batal</a>
       </div>

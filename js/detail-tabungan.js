@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded',async ()=>{
     if(!item.deposits || item.deposits.length===0){
       list.innerHTML = '<p class="text-sm text-slate-400">Belum ada riwayat simpanan.</p>'; return;
     }
-    // render as mini cards
+
     for(const d of item.deposits){
       const el = document.createElement('div');
       el.className = 'deposit-card flex items-center justify-between';
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded',async ()=>{
       reader.onload = async (ev)=>{
         const img = ev.target.result;
         item = await Storage.update(id, { gambar: img });
-        // re-render with new image
+
         item = await Storage.getById(id);
         renderDetail();
       };
@@ -131,25 +131,25 @@ document.addEventListener('DOMContentLoaded',async ()=>{
       item.deposits.unshift(deposit);
       item.terkumpul = Number(item.terkumpul) + val;
       await Storage.update(id, { deposits: item.deposits, terkumpul: item.terkumpul });
-      // re-fetch and render
+
       item = await Storage.getById(id);
       renderDetail();
     });
 
     const delBtn = document.getElementById('deleteBtn');
     if(delBtn) delBtn.addEventListener('click', ()=>{
-      // show modal
+
       deleteModal.classList.add('show');
       gsap.fromTo(deleteModal.querySelector('.relative'), {scale:0.98, opacity:0}, {scale:1, opacity:1, duration:0.25});
     });
   }
 
-  // delete modal handlers for detail
+
   cancelBtn.addEventListener('click', ()=> deleteModal.classList.remove('show'));
   confirmBtn.addEventListener('click', async ()=>{
     await Storage.remove(id);
     deleteModal.classList.remove('show');
-    // navigate back to dashboard
+
     fadeAndNavigate('../index.html');
   });
 
