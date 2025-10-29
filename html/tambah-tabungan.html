@@ -14,11 +14,11 @@
 <div class="max-w-2xl mx-auto p-6">
   <a href="../index.html" class="inline-flex items-center gap-2 text-slate-300 mb-4">← Kembali ke Dashboard</a>
   <div class="bg-white/3 border border-white/5 rounded-2xl p-6" data-aos="fade-up">
-    <h2 class="text-xl font-poppins mb-2">Buat Tujuan Tabungan Baru</h2>
-    <p class="text-sm text-slate-400 mb-4">Isi nama tujuan, target nominal, dan upload gambar dari device kamu. <br><span class="text-xs text-slate-500">Saldo awal opsional — isi jika sudah ada uang yang sudah disimpan sebelumnya.</span></p>
+    <h2 class="text-xl font-poppins mb-2">Buat Tabungan Baru</h2>
+    <p class="text-sm text-slate-400 mb-4">Isi nama tabungan baru & target nominal. <br><span class="text-xs text-slate-500">Saldo awal opsional — isi jika sudah ada uang yang sudah disimpan sebelumnya.</span></p>
     <form id="tambahForm" class="space-y-4">
       <div>
-        <label class="text-sm text-slate-300">Nama Tujuan</label>
+        <label class="text-sm text-slate-300">Nama Tabungan</label>
         <input id="nama" type="text" required class="mt-1 w-full bg-transparent border border-white/6 rounded-lg px-3 py-2 outline-none focus:ring-2 focus:ring-accent" placeholder="">
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div>
-        <label class="text-sm text-slate-300">Gambar Tujuan (opsional)</label>
+        <label class="text-sm text-slate-300">Foto Tabungan (opsional)</label>
         <div class="mt-2 flex items-center gap-3">
           <input id="gambar" type="file" accept="image/*" class="text-sm text-slate-300">
           <div id="previewWrap" class="w-28 h-20 rounded-lg bg-white/5 flex items-center justify-center overflow-hidden">
@@ -42,7 +42,7 @@
           <div id="cropModal" class="fixed inset-0 hidden z-50 items-center justify-center">
             <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
             <div class="relative bg-[#081028] border border-white/6 rounded-xl p-6 w-full max-w-lg mx-4 text-center">
-              <h3 class="text-lg font-semibold mb-3">Potong Gambar</h3>
+              <h3 class="text-lg font-semibold mb-3">Foto</h3>
               <canvas id="cropCanvas" class="mx-auto rounded-lg border border-white/10"></canvas>
               <div class="flex justify-center gap-3 mt-4">
                 <button id="cropCancel" class="px-4 py-2 rounded-md bg-white/10">Batal</button>

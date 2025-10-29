@@ -1,4 +1,3 @@
-// detail page with image change and deposit name + history cards
 document.addEventListener('DOMContentLoaded',async ()=>{
   const q=new URLSearchParams(location.search); const id=q.get('id');
   const wrap=document.getElementById('detailContent');
